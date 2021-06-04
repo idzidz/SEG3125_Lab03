@@ -23,6 +23,7 @@ function openInfo(evt, tabName) {
 function allInfo(evt, tabName){
 
     //Re-use of code above
+
     tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
@@ -48,13 +49,19 @@ function allInfo(evt, tabName){
 function populateListProductChoices(slct1, slct2, slct3) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
+	var childrenFound = s1.children;
+	var dietaryValue = "initial";
+	dietaryValue = childrenFound.None_id.checked ? childrenFound.None_id.value : dietaryValue;
+	dietaryValue = childrenFound.lactosefree_id.checked ? childrenFound.lactosefree_id.value : dietaryValue;
+	dietaryValue = childrenFound.nutfree_id.checked ? childrenFound.nutfree_id.value : dietaryValue;
+	dietaryValue = childrenFound.lactosenutfree_id.checked ? childrenFound.lactosenutfree_id.value : dietaryValue;	
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
     
-    var optionArray = restrictListProducts(products, s1.value, slct3);
+    var optionArray = restrictListProducts(products, dietaryValue, slct3);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">

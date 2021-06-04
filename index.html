@@ -16,23 +16,37 @@
         <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
         <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
         <button class="tablinks" onclick="allInfo(event, 'Overview')">Overview</button>
-        <div style="position:absolute; right:0; font-size:20px; padding-right:20px; padding-top:8px; font-family:Cambria">STUDENAC SUPERMARKET</div>
+        <div
+            style="position:absolute; right:0; font-size:20px; padding-right:20px; padding-top:8px; font-family:Cambria">
+            STUDENAC SUPERMARKET</div>
     </div>
 
     <!-- Tab content -->
     <div id="Client" class="tabcontent">
         <h3>Client Information</h3>
         <p>Are there any health concerns we should know about before showing you our catalog?</p>
-        <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', document.getElementById('organicCheck').checked)">
-            <option value=""></option>
+        <div id="dietSelect" name="dietSelect"
+            onchange="populateListProductChoices(this.id, 'displayProduct', document.getElementById('organicCheck').checked)">
+            <input type="radio" name="diet" id="None_id" value="None">No dietary<br>
+            <input type="radio" name="diet" id="lactosefree_id" value="lactosefree">LF<br>
+            <input type="radio" name="diet" id="nutfree_id" value="nutfree">NF<br>
+            <input type="radio" name="diet" id="lactosenutfree_id" value="lactosenutfree">LF & NF<br>
+            
+            <!-- <label for="test">Testing</label><br>
+            <input type="radio" id="test1" name="dietSelect" value="nutfree">
+            <label for="test">Testing</label><br>
+            <input type="radio" id="test2" name="dietSelect" value="None">
+            <label for="test">Testing</label><br> -->
+            <!-- <option value=""></option>
             <option value="None">None</option>
             <option value="lactosefree">Lactose Intolerant</option>
             <option value="nutfree">Nut Allergy</option>
-            <option value="lactosenutfree">Lactose Intolerant and Nut Allergy</option>
-        </select>
+            <option value="lactosenutfree">Lactose Intolerant and Nut Allergy</option> -->
+    </div>
 
         <p>Would you like to filter for organic items?</p>
-        <input type="checkbox" id="organicCheck" name="organic" onchange="populateListProductChoices('dietSelect', 'displayProduct', document.getElementById(this.id).checked)">
+        <input type="checkbox" id="organicCheck" name="organic"
+            onchange="populateListProductChoices('dietSelect', 'displayProduct', document.getElementById(this.id).checked)">
     </div>
 
     <div id="Products" class="tabcontent">
