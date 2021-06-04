@@ -35,6 +35,29 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.accordion {
+  background-color: rgb(54, 80, 197);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(52, 53, 150);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: rgb(44, 101, 175);
+  display: none;
+  overflow: hidden;
+}
   
 #signature {
   display: block;
@@ -54,3 +77,4 @@
   padding-right:250px;
   padding-top:13px;
 }
+
