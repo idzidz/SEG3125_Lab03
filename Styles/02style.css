@@ -3,8 +3,8 @@
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  /* border: 1px solid rgb(255, 255, 255);
+  background-color: #ffffff; */
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -39,7 +39,7 @@
 .accordion {
   background-color: #000000;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size:20px;
+  font-size:25px;
   font-weight:bolder;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -49,6 +49,7 @@
   border: none;
   outline: none;
   transition: 0.4s;
+
 }
 
 .active, .accordion:hover {
@@ -97,5 +98,3 @@
   padding-right:250px;
   padding-top:13px;
 }
-
-
