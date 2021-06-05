@@ -32,13 +32,16 @@
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  /* border: 1px solid #ccc;
+  border-top: none; */
 }
 
 .accordion {
-  background-color: rgb(54, 80, 197);
-  color: rgb(255, 255, 255);
+  background-color: #000000;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:20px;
+  font-weight:bolder;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -49,14 +52,31 @@
 }
 
 .active, .accordion:hover {
-  background-color: rgb(52, 53, 150);
+  background-color: #dd5b22;
 }
 
 .panel {
   padding: 0 18px;
-  background-color: rgb(44, 101, 175);
+  background-color:#924c7ac0;
+  /* background-color:#924C7A; */
   display: none;
   overflow: hidden;
+}
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid rgb(0, 0, 0);
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: #4ca16a;
 }
   
 #signature {
@@ -77,4 +97,5 @@
   padding-right:250px;
   padding-top:13px;
 }
+
 
